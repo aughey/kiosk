@@ -1,6 +1,7 @@
 BASEDIR=$(dirname "$0")
 
 . $BASEDIR/env
+HOSTNAME=`hostname`
 
 sendmsg()
 {
@@ -8,8 +9,8 @@ sendmsg()
 }
 
 
-HOSTNAME=`hostname`
 sendmsg "$HOSTNAME listening for commands"
+
 while [ 1 ]; do
 	#echo "waiting for message"
 	command=`mosquitto_sub -h $MQTT_HOST -t command -p $MQTT_PORT -u $MQTT_USER -P $MQTT_PASSWORD -C 1`
