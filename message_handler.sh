@@ -1,4 +1,6 @@
-. ./env
+BASEDIR=$(dirname "$0")
+
+. $BASEDIR/env
 
 sendmsg()
 {
