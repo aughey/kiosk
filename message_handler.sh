@@ -15,6 +15,9 @@ while [ 1 ]; do
 		sendmsg "reloading"
 		#echo "reloading"
 		DISPLAY=:0 xdotool search --onlyvisible --class Chrome windowfocus key ctrl+r
+	elif [ "$command" = "reboot" ]; then
+		sendmsg "rebooting"
+		sudo reboot
 	fi
 	sleep 1
 done
