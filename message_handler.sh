@@ -9,7 +9,7 @@ sendmsg()
 }
 
 
-sendmsg "$HOSTNAME listening for commands"
+sendmsg "listening"
 
 while [ 1 ]; do
 	#echo "waiting for message"
@@ -21,6 +21,8 @@ while [ 1 ]; do
 	elif [ "$command" = "pull" ]; then
 		sendmsg "pulling from github"
 		(cd $BASEDIR ; git pull)
+	elif [ "$command" = "ping" ]; then
+		sendmsg "pong"
 	elif [ "$command" = "reboot" ]; then
 		sendmsg "rebooting"
 		sudo reboot
