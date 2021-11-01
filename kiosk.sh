@@ -1,6 +1,6 @@
 export DISPLAY=:0
 
-sh /home/pi/src/keepon.sh &
+sh /home/pi/src/kiosk/keepon.sh &
 
 while [ 1 ]; do
   killall -w unclutter
