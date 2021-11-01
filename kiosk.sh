@@ -8,6 +8,6 @@ while [ 1 ]; do
   killall -w unclutter
   killall -w chromium-browser
   unclutter &
-  chromium-browser --temp-profile -kiosk $URL
+  chromium-browser --temp-profile -kiosk "$URL"
 done
 
