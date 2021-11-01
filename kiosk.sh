@@ -1,7 +1,6 @@
 export DISPLAY=:0
 
-xset s off
-xset -dpms
+sh /home/pi/src/keepon.sh &
 
 while [ 1 ]; do
   killall -w unclutter
