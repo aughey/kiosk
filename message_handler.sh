@@ -18,6 +18,10 @@ while [ 1 ]; do
 		sendmsg "reloading"
 		#echo "reloading"
 		DISPLAY=:0 xdotool search --onlyvisible --class Chrome windowfocus key ctrl+r
+	elif [ "$command" = "pull" ]; then
+		sendmsg "pulling from github"
+		(cd $BASEDIR ; git pull)
+	fi
 	elif [ "$command" = "reboot" ]; then
 		sendmsg "rebooting"
 		sudo reboot
