@@ -21,7 +21,6 @@ while [ 1 ]; do
 	elif [ "$command" = "pull" ]; then
 		sendmsg "pulling from github"
 		(cd $BASEDIR ; git pull)
-	fi
 	elif [ "$command" = "reboot" ]; then
 		sendmsg "rebooting"
 		sudo reboot
